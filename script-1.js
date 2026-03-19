@@ -1,3 +1,4 @@
+//Inti Catacora 78368
 // Array of 10 student objects
 const arrStudents = [
     { firstName: "John", lastName: "Smith", email: "john@email.com", grade: "A" },

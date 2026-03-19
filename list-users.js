@@ -1,3 +1,4 @@
+// Inti Catacora 78368
 async function fetchUsersData() {
    try {
        // The 'await' keyword pauses execution until the fetch Promise resolves
