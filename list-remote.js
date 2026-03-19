@@ -25,7 +25,7 @@ function displayCountriesData(countriesArray) {
     let htmlOutput = "";
 
     countriesArray.forEach(country => {
-        htmlOutput += `
+    htmlOutput += `
     <div style="border: 1px solid #ccc; padding: 12px; border-radius: 6px;"><img src="${country.flags.png}" alt="Flag of ${country.name.common}" width="100">
          <p>
             <b>${country.name.common}</b><br>
@@ -34,8 +34,7 @@ function displayCountriesData(countriesArray) {
             Region: ${country.region}
          </p>
     </div>
-    `;
-    });
+`;    });
 
     container.innerHTML = htmlOutput;
 }
@@ -47,9 +46,8 @@ document.getElementById("button-container").addEventListener("click", function(e
         fetchCountriesData();
     } else if (e.target.id === "btn-users") {
         fetchUsersData();   
-    }
-    else if (e.target.id === "btn-RickMorty")
-        fetchRickMortyData();   
+    } else if (e.target.id === "btn-RickMorty") 
+        fetchRickMortyData();
 }); 
 
 
@@ -79,13 +77,15 @@ function displayUsersData(usersArray) {
     let htmlOutput = "";
 
     usersArray.forEach(user => {
-        htmlOutput += `
-        <p><img src="${user.picture.thumbnail}" alt="Picture of ${user.name.first} ${user.name.last}" width="50"></p>
+    htmlOutput += `
+        <div style="border: 1px solid #ccc; padding: 12px; border-radius: 6px;">
+        <img src="${user.picture.thumbnail}" alt="Picture of ${user.name.first} ${user.name.last}" width="100">
             <p>
             <b>${user.name.first} ${user.name.last}</b><br>
-            Email: ${user.email}<br>              
-            Location: ${user.location.city}, ${user.location.country}
-            </p>
+        Email: ${user.email}<br>
+        Location: ${user.location.city}, ${user.location.country}
+        </p>
+        </div>
         `;
     });
     container.innerHTML = htmlOutput;
@@ -117,9 +117,9 @@ function displayRickMortyData(RickMortyArray) {
     let htmlOutput = "";
 
     RickMortyArray.forEach(character => {
-        htmlOutput += `
+    htmlOutput += `
         <div style="border: 1px solid #ccc; padding: 12px; border-radius: 6px;">
-        <img src="${character.image}" alt="Picture of ${character.name}" width="100"></p>
+        <img src="${character.image}" alt="Picture of ${character.name}" width="100">
             <p>
             <b>${character.name}</b><br>
             Status:${character.status}<br>
